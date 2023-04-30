@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-30T04:02:12.091Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="TEIyhZojPOR5VaRrRBqt" version="21.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-30T04:25:59.632Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="VCH-Rs8xs_gTmpf_SqH8" version="21.2.3" type="github">
   <diagram name="部署图" id="49O_F_yCy1H9jbOfkMmK">
     <mxGraphModel dx="1947" dy="452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -70,7 +70,7 @@
             <mxPoint x="421" y="271" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_xxn3V-7jnf_0HgaJS1W-29" value="rpcx原生支持etcd服务发现。cvn-controller可以向etcd注册服务。&lt;br&gt;也可以直接使用scylladb的cdc实现服务发现&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="_xxn3V-7jnf_0HgaJS1W-29" value="rpcx原生支持etcd服务发现。cvn-controller可以向etcd注册服务。&lt;br&gt;也可以直接使用scylladb的cdc ttl实现服务发现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="120" y="443" width="370" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_xxn3V-7jnf_0HgaJS1W-30" value="每个region是独立的scylladb集群，保存region域内的资源信息。&lt;br&gt;多region下，由region0保存CEN等跨域资源信息。&lt;br&gt;若考虑跨region高可用，可以将跨域资源同步到其他region中" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
