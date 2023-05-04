@@ -1,0 +1,36 @@
+version:  1.1.1
+location:
+  region_id: 1
+  region_name: "beijing"
+  zone_id: 1
+  zone_name: "bj-haidian"
+  data_center: "bj-haidian-1"
+  system_id: "hostname-cvn-01"
+log:
+  level: info
+  file: ./log/opensdn.log
+  size: 2   #MB
+  age:  28    #day
+  num:  10    
+cql:
+  version: "3.0.0"
+  global_cluster: "127.0.0.1"  # scylladb cluster in this region0, store CEN...
+  cluster:  "127.0.0.1"  # scylladb cluster in this region
+  port: 9042
+  keyspace: "opensdn"  
+  replication_factor: 1
+  consistency: "quorum"
+  retry:    5
+  compressor: ""
+  timeout:  600 #ms
+north_listen:
+  restful_ip: "127.0.0.1"
+  restful_port: 8080
+  rpcx_ip: "0.0.0.0"
+  rpcx_port: 8971
+south_listen:
+  rpcx_ip: "0.0.0.0"
+  rpcx_port: 8972
+
+
+

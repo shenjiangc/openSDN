@@ -1,0 +1,2 @@
+{"level":"INFO","time":"2023-04-27T16:48:18.018+0800","caller":"cmd/controller.go:34","msg":"log 123   2023-04-27 16:48:18.0095961 +0800 CST m=+0.032062401"}
+{"level":"INFO","time":"2023-04-27T16:48:18.020+0800","caller":"cmd/controller.go:35","msg":"abc","t1":"t1value","t2":2}
