@@ -23,14 +23,13 @@ cql:
   retry:    5
   compressor: ""
   timeout:  600 #ms
-north_listen:
-  restful_ip: "127.0.0.1"
-  restful_port: 8080
-  rpcx_ip: "0.0.0.0"
-  rpcx_port: 8971
-south_listen:
-  rpcx_ip: "0.0.0.0"
-  rpcx_port: 8972
+serve:
+  nb_restful_ip: "127.0.0.1"
+  nb_restful_port: 8080
+  nb_rpcx_ip: "0.0.0.0"
+  nb_rpcx_port: 8971
+  sb_rpcx_ip: "0.0.0.0"
+  sb_rpcx_port: 8972
 
 
 

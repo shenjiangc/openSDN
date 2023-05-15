@@ -79,3 +79,6 @@ tests/目录：包含所有单元测试和集成测试代码。
 docs/目录：包含与项目相关的文档，包括设计文档、API文档等。
 Makefile文件：包含项目构建和部署的Makefile规则。
 go.mod文件：包含项目的模块定义，指定了项目的依赖关系和版本信息。
+
+
+https://github.com/scylladb/scylla-cdc-go

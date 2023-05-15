@@ -51,18 +51,35 @@ func initCql() error {
 	}
 
 	//创建table
+	//本集群信息
+	//一，物理信息、组件信息、转发组件信息
+	//1, region
+	//2, zones
+	//3, chassis
+	//4, cvn-controller
+	//5, region gateways
+	//6, zone gateways
+	//二，逻辑资源信息
+	//1, VPCs
+	//2, subnets
+	//3, ACLs
+	//4, routeTables
+	//5, routeEntries
+	//
+	//
+
 	//cvnController table
 	err = session.ExecStmt(fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s.cvncontroller (
 		region text,
 		zone text,
 		data_center text,
 		system_id text,
-		north_restful_ip inet,
-		north_restful_port int,
-		north_rpcx_ip inet,
-		north_rpcx_port int,
-		south_rpcx_ip inet,
-		south_rpcx_port int,
+		nb_restful_ip inet,
+		nb_restful_port int,
+		nb_rpcx_ip inet,
+		nb_rpcx_port int,
+		sb_rpcx_ip inet,
+		sb_rpcx_port int,
 		create_time timestamp,
 		last_heartbeat timestamp,
 		PRIMARY KEY (region, systemid))
@@ -133,5 +150,11 @@ type dataCenter struct {
 	create_time time.Time
 }
 
-type chassis struct {
+type chassisInfo struct {
+	chassisName string
+	zoneName    string
+	regionName  string
+	tunnelType  int
+	tunnelIp    string
+	tunnelPort  int
 }
