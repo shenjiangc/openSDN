@@ -82,3 +82,39 @@ go.mod文件：包含项目的模块定义，指定了项目的依赖关系和�
 
 
 https://github.com/scylladb/scylla-cdc-go
+
+
+
+
+# golang技术选型
+
+- [v]日志：https://github.com/uber-go/zap
+- [v]CLI命令： https://github.com/spf13/cobra
+- [v]配置文件：github.com/spf13/viper （支持etcd）
+- [v]字段参数验证： https://github.com/go-playground/validator
+~~ - [X]路由库：https://github.com/gorilla/mux (不选，1：项目停止 2：go-restful自带mux) ~~
+~~ - [X]gorm: gorm.io/gorm (不需要) ~~
+- [v]cql:  
+    - gocql : https://github.com/gocql/gocql 
+    - gocqlx : https://github.com/scylladb/gocqlx
+- []rpc: https://github.com/smallnest/rpcx （支持etcd,性能高于grpc）
+- []rpcx-plugin-cql : 给rpcx增加cql插件，以支持cassandra & scylladb
+- [X]register： etcd
+- []OPENFLOW： cgo调用ovs自带openflow
+- [v]RESTful/openapi/Swagger: https://github.com/emicklei/go-restful
+- [v]Swagger-ui: swagger-ui-dist
+
+
+- [] openapi
+- [] scylladb的使用         需要有存储/数据库经验
+- [] gocql的使用            
+- [] rpcx的使用             需要有网络编程基础   给rpcx增加cql插件，以支持cassandra & scylladb
+- [] flow设计               需要精通openflow协议
+
+
+
+数据库： aerospike          
+        scylladb
+        Cassandra
+        mongodb
+
